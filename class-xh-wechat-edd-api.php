@@ -28,6 +28,10 @@ class XH_Wechat_Payment_EDD_Api{
         if(!isset($data['hash']) ||!isset($data['trade_order_id'])){
             return;
         }
+        
+        if(isset($data['plugins'])&&$data['plugins']!='edd-wechat'){
+            return;
+        }
   
         $hash = $this->generate_xh_hash($data,$appkey);
         if($data['hash']!=$hash){
@@ -280,7 +284,7 @@ class XH_Wechat_Payment_EDD_Api{
         $data=array(
             'version'   => '1.0',//api version
             'lang'       => get_option('WPLANG','zh-cn'),
-            'plugins'   => $this->id,
+            'plugins'   => 'edd-wechat',
             'appid'     => edd_get_option('xh_wechat_payment_edd_appid'),
             'trade_order_id'=>  $payment_data['order_id'],
             'payment'   => 'wechat',

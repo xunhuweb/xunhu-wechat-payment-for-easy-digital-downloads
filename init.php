@@ -3,7 +3,7 @@
  * Plugin Name: Xunhu Wechat Payment For Easy Digital Downloads
  * Plugin URI: http://www.wpweixin.net
  * Description: Easy Digital Downloads 新增微信支付网关，同时支持电脑端扫码支付，微信H5原生支付。
- * Version: 1.0.1
+ * Version: 1.0.3
  * Author: 迅虎网络 
  * Author URI:http://www.wpweixin.net 
  * Text Domain: Xunhu Wechat Payment For Easy Digital Downloads
@@ -13,7 +13,7 @@ if (! defined ( 'ABSPATH' )) exit (); // Exit if accessed directly
 if (! defined ( 'XH_WECHAT_PAYMENT_EDD' )) define ( 'XH_WECHAT_PAYMENT_EDD', 'XH_WECHAT_PAYMENT_EDD' ); else return;
 
 define('XH_WECHAT_PAYMENT_EDD_FILE',__FILE__);
-define('XH_WECHAT_PAYMENT_EDD_VERSION', '1.0.1');
+define('XH_WECHAT_PAYMENT_EDD_VERSION', '1.0.3');
 define('XH_WECHAT_PAYMENT_EDD_DIR',rtrim(plugin_dir_path(XH_WECHAT_PAYMENT_EDD_FILE),'/'));
 define('XH_WECHAT_PAYMENT_EDD_URL',rtrim(plugin_dir_url(XH_WECHAT_PAYMENT_EDD_FILE),'/'));
 
