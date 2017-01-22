@@ -279,7 +279,7 @@ class XH_Wechat_Payment_EDD_Api{
 	}
         $siteurl= $home_url;
         $data=array(
-            'version'   => '1.0',//api version
+            'version'   => '1.1',//api version
             'lang'       => get_option('WPLANG','zh-cn'),
             'plugins'   => 'edd-wechat',
             'appid'     => edd_get_option('xh_wechat_payment_edd_appid'),
