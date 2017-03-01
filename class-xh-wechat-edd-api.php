@@ -273,6 +273,11 @@ class XH_Wechat_Payment_EDD_Api{
         $params['hash']=$this->generate_xh_hash($params, $hashkey);
         
         $siteurl = rtrim(home_url(),'/');
+        $posi =strripos($siteurl, '/');
+        //若是二级目录域名，需要以“/”结尾，否则会出现403跳转
+        if($posi!==false&&$posi>7){
+            $siteurl.='/';
+        }
         $data=array(
             'version'   => '1.1',//api version
             'lang'       => get_option('WPLANG','zh-cn'),
