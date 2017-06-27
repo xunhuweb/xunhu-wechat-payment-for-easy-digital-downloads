@@ -8,6 +8,14 @@ class XH_Wechat_Payment_EDD_Api{
     }
   
     public function init(){
+        if(!function_exists('edd_get_option')){
+            add_action ( 'admin_notices',function(){
+                ?>
+                <div class="notice notice-error is-dismissible"><b> Wechat:</b><p>请启用EDD插件!</p></div>
+                <?php 
+            });
+            return;
+        }
         $appkey =edd_get_option('xh_wechat_payment_edd_appsecret');
         
         //return
@@ -360,7 +368,7 @@ class XH_Wechat_Payment_EDD_Api{
             }
         }
     
-        $title = mb_strimwidth($subject, 0, $limit);
+        $title = mb_strimwidth($subject, 0, $limit,'utf-8');
         return apply_filters('xh-payment-get-order-title', $title,$order);
     }
  
