@@ -92,7 +92,7 @@ class XH_Wechat_Payment_EDD_Api{
         
         $val =edd_get_option('xh_wechat_payment_edd_transaction_url');
         if(empty($val)){
-            edd_update_option('xh_wechat_payment_edd_transaction_url','https://pay.wordpressopen.com');
+            edd_update_option('xh_wechat_payment_edd_transaction_url','https://pay2.xunhupay.com/v2');
         }
         
         $val =edd_get_option('xh_wechat_payment_edd_exchange_rate');
